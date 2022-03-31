@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Onde você mora?</h1>
+    <select id="lista_cidade">
+        <option value="0">-Selecione-</option>
+        <option value="1">SP - Capital</option>
+        <option value="2">SP - Interior</option>
+        <option value="3">Outros Estados</option>
+    </select>
+    <button onclick="bt_local()">Falar o local</button>
+    <br><br>
+    <img src="" id="img_local" style="height: 150px">
+    <div id="spanText"></div>
+</body>
+</html>
+<script>
+    function bt_local()
+    {
+        var ax_cidade = Number (lista_cidade.value);
+
+        if (ax_cidade == 0)
+        {
+            alert (`Por favor, escolher uma opção.`)
+            spanText.innerHTML = ``
+            img_local.src = ``
+        }
+
+        else 
+        {
+            if (ax_cidade == 1)
+            {
+                spanText.innerHTML = `<h2>Os nascidos nesta cidade são Paulistanos.</h2>`
+                img_local.src = `https://viagemeturismo.abril.com.br/wp-content/uploads/2017/12/istock-842960000.jpg`
+            }
+
+            if (ax_cidade == 2)
+            {
+                spanText.innerHTML = `<h2>Os nascidos neste estado são Paulistas.</h2>`
+                img_local.src = `https://assistentedeviagem.com.br/blog/wp-content/uploads/2019/08/campos-do-jordao-destaque-1280x720.jpg`
+            }
+
+            if (ax_cidade == 3)
+            {
+                spanText.innerHTML = `<h2>Os nascidos neste lugar não são Paulistanos e nem Paulistas.</h2>`
+                img_local.src = `https://upload.wikimedia.org/wikipedia/commons/9/98/Cidade_Maravilhosa.jpg`
+            }
+        }
+    }
+</script>

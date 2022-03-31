@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Faça o seu cadastro</h1>
+    Insira seu nome:
+    <input type="text" id="ipt_nome">
+    <br>
+    Insira sua idade:
+    <input type="text" id="ipt_idade">
+    <br><br>
+    <button onclick="bt_cadastro()">Cadastrar</button>
+    <br>
+    <button onclick="bt_encerrar()">Encerrar</button>
+    <br><br>
+    <div id="spanText"></div>
+</body>
+</html>
+<script>
+    var ax_contagem = 0;
+    function bt_cadastro()
+    {
+        var ax_nome = ipt_nome.value
+        var ax_idade = Number (ipt_idade.value)
+        if (ax_nome == 0)
+        {
+            alert (`Nome Inválido!`)
+            spanText.innerHTML = ``
+        }
+        else if (ax_idade < 0)
+        {
+            alert (`Idade inválida!`)
+            spanText.innerHTML = ``
+        }
+        else if (ax_idade > 80)
+        {
+            alert (`Procurar escola especial`)
+            spanText.innerHTML = `` 
+        }
+        else
+        {
+            ax_contagem = ax_contagem + 1
+
+            if (ax_idade >= 18)
+            {
+                spanText.innerHTML = `Nome: ${ax_nome} <br>
+                Idade: ${ax_idade} anos`
+            }
+            else
+            {
+                var ax_delta = 18 - ax_idade
+                alert (`Aguardar ${ax_delta} anos para tirar a CNH`)
+                spanText.innerHTML = `Nome: ${ax_nome} <br>
+                Idade: ${ax_idade} anos`
+            }
+        }
+    }
+    function bt_encerrar()
+    {
+        alert (`Foram cadastrados ${ax_contagem} alunos.`)
+        spanText.innerHTML = ``
+        ipt_idade.value = ``
+        ipt_nome.value = ``
+        ax_contagem = 0
+    }
+
+
+</script>
