@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Quente X Frio</h1>
+    Qual a temperatura atual?
+    <br>
+    <input id="ipt_temp">
+    <br>
+    <button onclick="bt_verificar()">Verificar situação</button>
+    <span id="spanText"></span>
+</body>
+</html>
+<script>
+    function bt_verificar()
+    {
+        var ax_temp = Number (ipt_temp.value)
+        if (ax_temp >= 21 && ax_temp <= 24)
+        {
+            alert (`Temperatura confortável :)`)
+        }   
+        else
+        {
+            alert (`Temperatura desconfortável >:(`)
+        }
+    }
+
+
+</script>

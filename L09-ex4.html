@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Vegano ou nem?</h1>
+    <select id="slct_lista1">
+        <option value="1">Ovos</option>
+        <option value="2">Leite de Arroz</option>
+        <option value="3">Bacon</option>
+    </select>
+    <select id="slct_lista2">
+        <option value="1">Bife</option>
+        <option value="2">Hamburguer de Soja</option>
+        <option value="3">Frango Grelhado</option>
+    </select>
+    <select id="slct_lista3">
+        <option value="1">Picanha de Soja</option>
+        <option value="2">Cupim</option>
+        <option value="3">Coração</option>
+    </select>
+    <br>
+    <button onclick="bt_verificar()">Verificar</button>
+</body>
+</html>
+<script>
+    function bt_verificar()
+    {
+        var ax_lista1 = slct_lista1.value
+        var ax_lista2 = slct_lista2.value
+        var ax_lista3 = slct_lista3.value
+        if (ax_lista1 == 2 && ax_lista2 == 2 && ax_lista3 == 1)
+        {
+            alert (`Sim, você é Vegano!`)
+        }
+        else
+        {
+            alert (`Não, você não é vegano`)
+        }
+    }
+
+
+</script>
+    
